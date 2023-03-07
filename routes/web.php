@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -10,6 +9,13 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+use App\Http\Controllers\IndexController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductosController;
+use App\Http\Controllers\ImagenController;
+use App\Http\Controllers\CategoriaController;
 
 Route::get('/','IndexController@index');
 Route::get('/listaproducto','IndexController@shop');
