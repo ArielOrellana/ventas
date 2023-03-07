@@ -8,6 +8,13 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
+      @if(Auth::user())
+      @if(Auth::user()->hasRole('admin'))
+      <li class="nav-item active">
+        <a class="nav-link" href="{{url('/home')}}">admin<span class="sr-only">(current)</span></a>
+      </li>
+      @endif
+      @endif
       <li class="nav-item active">
         <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
       </li>
